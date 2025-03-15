@@ -1,3 +1,8 @@
+import ChannelBlock from './lighting/channel-block';
+import LightingOutput from './lighting/lighting-output';
+import RTTrPL from './lighting/rttrpl';
+import Spot from './lighting/spot';
+import Universe from './lighting/universe';
 import CentroidAccelVelocity from './motion/centroid-accel-velocity';
 import CentroidPosition from './motion/centroid-position';
 import OrientationEuler from './motion/orientation-euler';
@@ -13,6 +18,7 @@ import RTTrPHeader from './rttrp-header';
 export const Encoders = {
   RTTrPHeader,
   RTTrPM,
+  RTTrPL,
   Trackable,
   CentroidPosition,
   OrientationQuaternion,
@@ -22,4 +28,8 @@ export const Encoders = {
   TrackedPointAccelVelocity,
   ZoneCollisionDetection,
   ZoneObject,
+  LightingOutput,
+  Universe,
+  Spot,
+  ChannelBlock,
 };
