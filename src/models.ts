@@ -15,6 +15,11 @@ export type RTTrPM = {
   modules: Trackable[];
 };
 
+export type RTTrPL = {
+  header: RTTrPHeader;
+  modules: LightingOutput[];
+};
+
 export type TrackableModule =
   | CentroidPosition
   | CentroidAccelVelocity
