@@ -131,6 +131,41 @@ const goodTests = [
     },
     decoder: Decoders.TrackedPointAccelVelocity,
   },
+  {
+    description: 'Zone Collision Detection',
+    bytes: new Uint8Array([
+      0x22, 0x00, 0x14, 0x02, 0x08, 0x06, 0x7a, 0x6f, 0x6e, 0x65, 0x20, 0x31, 0x08, 0x06, 0x7a, 0x6f, 0x6e, 0x65, 0x20,
+      0x32,
+    ]),
+    expected: {
+      type: 0x22,
+      size: 20,
+      numberOfZones: 2,
+      zones: [
+        {
+          size: 0x08,
+          nameLength: 0x06,
+          name: 'zone 1',
+        },
+        {
+          size: 0x08,
+          nameLength: 0x06,
+          name: 'zone 2',
+        },
+      ],
+    },
+    decoder: Decoders.ZoneCollisionDetection,
+  },
+  {
+    description: 'Zone Object',
+    bytes: new Uint8Array([0x08, 0x06, 0x7a, 0x6f, 0x6e, 0x65, 0x20, 0x31]),
+    expected: {
+      size: 0x08,
+      nameLength: 0x06,
+      name: 'zone 1',
+    },
+    decoder: Decoders.ZoneObject,
+  },
 ];
 
 describe('RTTrP Bytes Decoding', () => {

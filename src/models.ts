@@ -76,3 +76,16 @@ export type OrientationEuler = {
   r2: number;
   r3: number;
 };
+
+export type ZoneCollisionDetection = {
+  type: number;
+  size: number;
+  numberOfZones: number;
+  zones: ZoneObject[];
+};
+
+export type ZoneObject = {
+  size: number;
+  nameLength: number;
+  name: string;
+};

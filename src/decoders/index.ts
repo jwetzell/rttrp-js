@@ -4,6 +4,8 @@ import OrientationEuler from './motion/orientation-euler';
 import OrientationQuaternion from './motion/orientation-quaternion';
 import TrackedPointAccelVelocity from './motion/tracked-point-accel-velocity';
 import TrackedPointPosition from './motion/tracked-point-position';
+import ZoneCollisionDetection from './motion/zone-collision-detection';
+import ZoneObject from './motion/zone-object';
 import RTTrPHeader from './rttrp';
 
 export const Decoders = {
@@ -14,4 +16,6 @@ export const Decoders = {
   TrackedPointAccelVelocity,
   OrientationQuaternion,
   OrientationEuler,
+  ZoneCollisionDetection,
+  ZoneObject,
 };
