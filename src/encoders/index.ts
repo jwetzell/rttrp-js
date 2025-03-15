@@ -1,4 +1,5 @@
 import ChannelBlock from './lighting/channel-block';
+import LightingOutput from './lighting/lighting-output';
 import Spot from './lighting/spot';
 import Universe from './lighting/universe';
 import CentroidAccelVelocity from './motion/centroid-accel-velocity';
@@ -25,6 +26,7 @@ export const Encoders = {
   TrackedPointAccelVelocity,
   ZoneCollisionDetection,
   ZoneObject,
+  LightingOutput,
   Universe,
   Spot,
   ChannelBlock,
