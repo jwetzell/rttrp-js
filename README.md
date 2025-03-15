@@ -4,5 +4,5 @@ typesecript implementation of [RTTrP](https://rttrp.github.io/RTTrP-Wiki/index.h
 
 ## TODO
 - [x] RTTrP Header
-- [ ] RTTrPM
+- [x] RTTrPM
 - [ ] RTTrPL
