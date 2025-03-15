@@ -12,37 +12,35 @@ export default (bytes: Uint8Array): RTTrPHeader => {
   let isLittleEndian = false;
   const intHeader = view.getUint16(dataOffset, isLittleEndian);
   dataOffset += 2;
-  const fltHeader = view.getUint16(dataOffset, isLittleEndian);
+  const floatHeader = view.getUint16(dataOffset, isLittleEndian);
   dataOffset += 2;
-  if (intHeader === 0x4154) {
-    isLittleEndian = false;
-  }
   const version = view.getUint16(dataOffset, isLittleEndian);
   dataOffset += 2;
   if (version !== 0x0002) {
     throw new Error('Only version 2 of the RTTrP header is currently supported');
   }
-  const pID = view.getUint32(dataOffset, isLittleEndian);
+  if (intHeader === 0x5441) {
+    isLittleEndian = true;
+  }
+  const packetID = view.getUint32(dataOffset, isLittleEndian);
   dataOffset += 4;
 
-  const pForm = view.getUint8(dataOffset);
+  const packetFormat = view.getUint8(dataOffset);
   dataOffset += 1;
-  const pktSize = view.getUint16(dataOffset, isLittleEndian);
+  const size = view.getUint16(dataOffset, isLittleEndian);
   dataOffset += 2;
   const context = view.getUint32(dataOffset, isLittleEndian);
   dataOffset += 4;
-  const numMods = view.getUint8(dataOffset);
+  const subModuleCount = view.getUint8(dataOffset);
   dataOffset += 1;
-  const data = bytes.slice(dataOffset);
   return {
     intHeader,
-    fltHeader,
+    floatHeader,
     version,
-    pID,
-    pForm,
-    pktSize,
+    packetID,
+    packetFormat,
+    size,
     context,
-    numMods,
-    data,
+    subModuleCount,
   };
 };

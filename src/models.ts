@@ -1,11 +1,11 @@
 export type RTTrPHeader = {
-  intHeader: number;
-  fltHeader: number;
+  intHeader?: number;
+  floatHeader: number;
   version: number;
-  pID: number;
-  pForm: number;
-  pktSize: number;
+  packetID: number;
+  packetFormat: number;
+  size: number;
   context: number;
-  numMods: number;
-  data: Uint8Array;
+  subModuleCount: number;
+};
 };
