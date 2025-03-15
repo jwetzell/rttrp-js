@@ -1,4 +1,5 @@
 import ChannelBlock from './lighting/channel-block';
+import Spot from './lighting/spot';
 import CentroidAccelVelocity from './motion/centroid-accel-velocity';
 import CentroidPosition from './motion/centroid-position';
 import OrientationEuler from './motion/orientation-euler';
@@ -23,5 +24,6 @@ export const Encoders = {
   TrackedPointAccelVelocity,
   ZoneCollisionDetection,
   ZoneObject,
+  Spot,
   ChannelBlock,
 };
