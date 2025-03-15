@@ -115,6 +115,14 @@ export type ZoneObject = {
   name: string;
 };
 
+export type Universe = {
+  type: number;
+  size: number;
+  id: number;
+  numberOfSpots: number;
+  spots: Spot[];
+};
+
 export type Spot = {
   type: number;
   size: number;

@@ -13,7 +13,7 @@ export default (bytes: Uint8Array, isLittleEndian: boolean = false): Spot => {
 
   const size = view.getUint16(dataOffset, isLittleEndian);
   dataOffset += 2;
-  if (size !== bytes.byteLength) {
+  if (size < bytes.byteLength) {
     throw new Error('Spot module size mismatch');
   }
   const id = view.getUint16(dataOffset, isLittleEndian);
