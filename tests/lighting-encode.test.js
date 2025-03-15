@@ -2,7 +2,15 @@ const { deepEqual, throws } = require('assert');
 const { describe, it } = require('node:test');
 const { Encoders } = require('../');
 
-const goodTests = [];
+const goodTests = [
+  {
+    description: 'Channel Block',
+    expected: new Uint8Array([0x00, 0x08, 0x00, 0x06, 0x40]),
+    bytes: () => {
+      return Encoders.ChannelBlock(8, 6, 64);
+    },
+  },
+];
 
 describe('RTTrPL Message Encoding', () => {
   goodTests.forEach((messageTest) => {
