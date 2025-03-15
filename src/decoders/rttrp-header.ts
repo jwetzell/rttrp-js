@@ -42,5 +42,6 @@ export default (bytes: Uint8Array): RTTrPHeader => {
     size,
     context,
     subModuleCount,
+    isLittleEndian,
   };
 };
