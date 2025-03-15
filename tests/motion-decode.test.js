@@ -1,6 +1,6 @@
 const { deepEqual, throws } = require('assert');
 const { describe, it } = require('node:test');
-const { Decoders } = require('../dist/cjs');
+const { Decoders } = require('../');
 const goodTests = [
   {
     description: 'Centroid Position',
