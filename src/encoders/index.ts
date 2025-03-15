@@ -6,6 +6,8 @@ import RTTrPM from './motion/rttrpm';
 import Trackable from './motion/trackable';
 import TrackedPointAccelVelocity from './motion/tracked-point-accel-velocity';
 import TrackedPointPosition from './motion/tracked-point-position';
+import ZoneCollisionDetection from './motion/zone-collision-detection';
+import ZoneObject from './motion/zone-object';
 import RTTrPHeader from './rttrp-header';
 
 export const Encoders = {
@@ -18,4 +20,6 @@ export const Encoders = {
   TrackedPointPosition,
   CentroidAccelVelocity,
   TrackedPointAccelVelocity,
+  ZoneCollisionDetection,
+  ZoneObject,
 };
