@@ -14,7 +14,7 @@ export default (
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
 
   let dataOffset = 0;
-  view.setUint8(dataOffset, 0x02);
+  view.setUint8(dataOffset, 0x20);
   dataOffset += 1;
   view.setUint16(dataOffset, bytes.byteLength, isLittleEndian);
   dataOffset += 2;
