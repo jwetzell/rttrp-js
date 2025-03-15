@@ -3,6 +3,7 @@ import OrientationEuler from './motion/orientation-euler';
 import OrientationQuaternion from './motion/orientation-quaternion';
 import RTTrPM from './motion/rttrpm';
 import Trackable from './motion/trackable';
+import TrackedPointPosition from './motion/tracked-point-position';
 import RTTrPHeader from './rttrp-header';
 
 export const Encoders = {
@@ -12,4 +13,5 @@ export const Encoders = {
   CentroidPosition,
   OrientationQuaternion,
   OrientationEuler,
+  TrackedPointPosition,
 };
