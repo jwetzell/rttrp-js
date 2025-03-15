@@ -15,6 +15,11 @@ export type RTTrPM = {
   modules: Trackable[];
 };
 
+export type RTTrPL = {
+  header: RTTrPHeader;
+  modules: LightingOutput[];
+};
+
 export type TrackableModule =
   | CentroidPosition
   | CentroidAccelVelocity
@@ -113,4 +118,37 @@ export type ZoneObject = {
   size: number;
   nameLength: number;
   name: string;
+};
+
+export type LightingOutput = {
+  type: number;
+  size: number;
+  sequence: number;
+  action: number;
+  holdTime: number;
+  numberOfUniverses: number;
+  universes: Universe[];
+};
+
+export type Universe = {
+  type: number;
+  size: number;
+  id: number;
+  numberOfSpots: number;
+  spots: Spot[];
+};
+
+export type Spot = {
+  type: number;
+  size: number;
+  id: number;
+  offset: number;
+  numberOfChannelBlocks: number;
+  channelBlocks: ChannelBlock[];
+};
+
+export type ChannelBlock = {
+  offset: number;
+  fade: number;
+  value: number;
 };
