@@ -12,7 +12,6 @@ const goodTests = [
       return Encoders.RTTrPHeader(0x4334, 2, 0x12345678, 0, 0x12345678, [], false);
     },
   },
-  },
 ];
 
 describe('RTTrP Message Encoding', () => {
