@@ -19,6 +19,16 @@ export type CentroidPosition = {
 };
 
 
+export type TrackedPointPosition = {
+  type: number;
+  size: number;
+  latency: number;
+  x: number;
+  y: number;
+  z: number;
+  index: number;
+};
+
 export type OrientationQuaternion = {
   type: number;
   size: number;
