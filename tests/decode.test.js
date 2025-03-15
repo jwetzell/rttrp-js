@@ -16,6 +16,7 @@ const goodTests = [
       size: 18,
       context: 305419896,
       subModuleCount: 0,
+      isLittleEndian: false,
     },
     decoder: Decoders.RTTrPHeader,
   },
@@ -218,6 +219,37 @@ const goodTests = [
       ],
     },
     decoder: Decoders.Trackable,
+  },
+  {
+    description: 'RTTrPM + Empty Trackable',
+    bytes: new Uint8Array([
+      65, 84, 67, 52, 0, 2, 0, 0, 0, 1, 0, 0, 27, 18, 52, 86, 120, 1, 1, 0, 9, 4, 84, 101, 115, 116, 0,
+    ]),
+    expected: {
+      header: {
+        intHeader: 0x4154,
+        floatHeader: 0x4334,
+        version: 2,
+        packetID: 1,
+        packetFormat: 0,
+        size: 27,
+        context: 0x12345678,
+        subModuleCount: 1,
+        isLittleEndian: false,
+      },
+      modules: [
+        {
+          type: 0x01,
+          size: 9,
+          nameLength: 4,
+          name: 'Test',
+          timestamp: undefined,
+          numberOfModules: 0,
+          modules: [],
+        },
+      ],
+    },
+    decoder: Decoders.RTTrPM,
   },
 ];
 

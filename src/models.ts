@@ -9,6 +9,10 @@ export type RTTrPHeader = {
   subModuleCount: number;
   isLittleEndian: boolean;
 };
+
+export type RTTrPM = {
+  header: RTTrPHeader;
+  modules: Trackable[];
 };
 
 export type TrackableModule =
