@@ -251,6 +251,16 @@ const goodTests = [
     },
     decoder: Decoders.RTTrPM,
   },
+  {
+    description: 'Channel Block',
+    bytes: new Uint8Array([0x00, 0x08, 0x00, 0x06, 0x40]),
+    expected: {
+      offset: 0x08,
+      fade: 0x06,
+      value: 0x40,
+    },
+    decoder: Decoders.ChannelBlock,
+  },
 ];
 
 describe('RTTrP Bytes Decoding', () => {

@@ -114,3 +114,9 @@ export type ZoneObject = {
   nameLength: number;
   name: string;
 };
+
+export type ChannelBlock = {
+  offset: number;
+  fade: number;
+  value: number;
+};
