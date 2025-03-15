@@ -18,6 +18,19 @@ export type CentroidPosition = {
   z: number;
 };
 
+export type CentroidAccelVelocity = {
+  type: number;
+  size: number;
+  x: number;
+  y: number;
+  z: number;
+  accelX: number;
+  accelY: number;
+  accelZ: number;
+  velocityX: number;
+  velocityY: number;
+  velocityZ: number;
+};
 
 export type TrackedPointPosition = {
   type: number;
@@ -26,6 +39,21 @@ export type TrackedPointPosition = {
   x: number;
   y: number;
   z: number;
+  index: number;
+};
+
+export type TrackedPointAccelVelocity = {
+  type: number;
+  size: number;
+  x: number;
+  y: number;
+  z: number;
+  accelX: number;
+  accelY: number;
+  accelZ: number;
+  velocityX: number;
+  velocityY: number;
+  velocityZ: number;
   index: number;
 };
 
