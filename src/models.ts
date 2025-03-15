@@ -8,4 +8,3 @@ export type RTTrPHeader = {
   context: number;
   subModuleCount: number;
 };
-};
