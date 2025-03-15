@@ -9,6 +9,25 @@ export type RTTrPHeader = {
   subModuleCount: number;
 };
 
+export type TrackableModule =
+  | CentroidPosition
+  | CentroidAccelVelocity
+  | TrackedPointPosition
+  | TrackedPointAccelVelocity
+  | OrientationEuler
+  | OrientationQuaternion
+  | ZoneCollisionDetection;
+
+export type Trackable = {
+  type: number;
+  size: number;
+  nameLength: number;
+  name: string;
+  timestamp?: number;
+  numberOfModules: number;
+  modules: TrackableModule[];
+};
+
 export type CentroidPosition = {
   type: number;
   size: number;

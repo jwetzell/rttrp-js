@@ -166,6 +166,59 @@ const goodTests = [
     },
     decoder: Decoders.ZoneObject,
   },
+  {
+    description: 'Trackable (with Timestamp) + Centroid Position Module',
+    bytes: new Uint8Array([
+      81, 0, 42, 4, 84, 101, 115, 116, 103, 213, 152, 27, 1, 2, 0, 29, 0, 100, 63, 240, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0,
+      0, 0, 0, 0, 64, 8, 0, 0, 0, 0, 0, 0,
+    ]),
+    expected: {
+      type: 0x51,
+      size: 42,
+      nameLength: 4,
+      name: 'Test',
+      timestamp: 1742051355,
+      numberOfModules: 1,
+      modules: [
+        {
+          type: 0x02,
+          size: 29,
+          latency: 100,
+          x: 1,
+          y: 2,
+          z: 3,
+        },
+      ],
+    },
+    decoder: Decoders.Trackable,
+  },
+  {
+    description: 'Trackable (with Timestamp) + Tracked Point Position Module',
+    bytes: new Uint8Array([
+      81, 0, 43, 4, 84, 101, 115, 116, 103, 213, 152, 27, 1, 6, 0, 30, 0, 100, 63, 240, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0,
+      0, 0, 0, 0, 64, 8, 0, 0, 0, 0, 0, 0, 1,
+    ]),
+    expected: {
+      type: 0x51,
+      size: 43,
+      nameLength: 4,
+      name: 'Test',
+      timestamp: 1742051355,
+      numberOfModules: 1,
+      modules: [
+        {
+          type: 0x06,
+          size: 30,
+          latency: 100,
+          x: 1,
+          y: 2,
+          z: 3,
+          index: 1,
+        },
+      ],
+    },
+    decoder: Decoders.Trackable,
+  },
 ];
 
 describe('RTTrP Bytes Decoding', () => {
