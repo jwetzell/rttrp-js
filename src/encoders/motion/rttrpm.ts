@@ -11,18 +11,15 @@ export default (
   trackables.forEach((trackable) => {
     totalPacketSize += trackable.length;
   });
-  console.log(totalPacketSize);
   const bytes = new Uint8Array(totalPacketSize);
 
   let dataOffset = 0;
 
   const headerBytes = RTTrPHeader(0x4334, 0x02, packetId, 0x00, context, trackables, isLittleEndian);
-  console.log(headerBytes.length);
 
   bytes.set(headerBytes, dataOffset);
   dataOffset += headerBytes.length;
   trackables.forEach((trackable) => {
-    console.log('dataOffset', dataOffset);
     bytes.set(trackable, dataOffset);
     dataOffset += trackable.length;
   });
