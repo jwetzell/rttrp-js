@@ -26,7 +26,6 @@ export default (bytes: Uint8Array, isLittleEndian: boolean = false): Universe =>
 
   for (let index = 0; index < numberOfSpots; index++) {
     const spotData = bytes.subarray(spotOffset);
-    console.log(spotData);
     const spot = Decoders.Spot(spotData);
     spots.push(spot);
     spotOffset += spot.size;

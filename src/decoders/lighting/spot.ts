@@ -28,7 +28,6 @@ export default (bytes: Uint8Array, isLittleEndian: boolean = false): Spot => {
 
   for (let index = 0; index < numberOfChannelBlocks; index++) {
     const channelBlockData = bytes.subarray(zoneObjectOffset, zoneObjectOffset + 5);
-    console.log(channelBlockData);
     const channelBlock = Decoders.ChannelBlock(channelBlockData);
     channelBlocks.push(channelBlock);
     zoneObjectOffset += channelBlockData.byteLength;
