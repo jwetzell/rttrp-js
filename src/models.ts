@@ -115,6 +115,15 @@ export type ZoneObject = {
   name: string;
 };
 
+export type Spot = {
+  type: number;
+  size: number;
+  id: number;
+  offset: number;
+  numberOfChannelBlocks: number;
+  channelBlocks: ChannelBlock[];
+};
+
 export type ChannelBlock = {
   offset: number;
   fade: number;

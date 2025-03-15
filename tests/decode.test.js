@@ -252,6 +252,25 @@ const goodTests = [
     decoder: Decoders.RTTrPM,
   },
   {
+    description: 'Spot + Single Channel Block',
+    bytes: new Uint8Array([0x0a, 0x00, 0x0e, 0x12, 0x34, 0x00, 0x01, 0x00, 0x01, 0x00, 0x08, 0x00, 0x06, 0x40]),
+    expected: {
+      type: 0x0a,
+      size: 14,
+      id: 0x1234,
+      offset: 1,
+      numberOfChannelBlocks: 1,
+      channelBlocks: [
+        {
+          offset: 0x08,
+          fade: 0x06,
+          value: 0x40,
+        },
+      ],
+    },
+    decoder: Decoders.Spot,
+  },
+  {
     description: 'Channel Block',
     bytes: new Uint8Array([0x00, 0x08, 0x00, 0x06, 0x40]),
     expected: {
