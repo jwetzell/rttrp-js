@@ -21,6 +21,15 @@ const goodTests = [
       return Encoders.RTTrPHeader(0x4334, 2, 0x12345678, 0, 0x12345678, [], true);
     },
   },
+  {
+    description: 'Empty RTTrPM',
+    expected: new Uint8Array([
+      65, 84, 67, 52, 0, 2, 0, 0, 0, 1, 0, 0, 27, 18, 52, 86, 120, 1, 1, 0, 9, 4, 84, 101, 115, 116, 0,
+    ]),
+    bytes: () => {
+      return Encoders.RTTrPM(0x01, 0x12345678, [Encoders.Trackable('Test', [])]);
+    },
+  },
 ];
 
 describe('RTTrP Message Encoding', () => {
