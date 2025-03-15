@@ -7,7 +7,7 @@ import TrackedPointAccelVelocity from './motion/tracked-point-accel-velocity';
 import TrackedPointPosition from './motion/tracked-point-position';
 import ZoneCollisionDetection from './motion/zone-collision-detection';
 import ZoneObject from './motion/zone-object';
-import RTTrPHeader from './rttrp';
+import RTTrPHeader from './rttrp-header';
 
 export const Decoders = {
   RTTrPHeader,

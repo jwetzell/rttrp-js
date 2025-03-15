@@ -1,5 +1,5 @@
 export type RTTrPHeader = {
-  intHeader?: number;
+  intHeader: number;
   floatHeader: number;
   version: number;
   packetID: number;
@@ -7,6 +7,8 @@ export type RTTrPHeader = {
   size: number;
   context: number;
   subModuleCount: number;
+  isLittleEndian: boolean;
+};
 };
 
 export type TrackableModule =
