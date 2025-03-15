@@ -12,6 +12,15 @@ const goodTests = [
       return Encoders.RTTrPHeader(0x4334, 2, 0x12345678, 0, 0x12345678, [], false);
     },
   },
+  {
+    description: 'RTTrP Header Little Endian',
+    expected: new Uint8Array([
+      0x54, 0x41, 0x34, 0x43, 0x00, 0x02, 0x78, 0x56, 0x34, 0x12, 0x00, 0x12, 0x00, 0x78, 0x56, 0x34, 0x12, 0x00,
+    ]),
+    bytes: () => {
+      return Encoders.RTTrPHeader(0x4334, 2, 0x12345678, 0, 0x12345678, [], true);
+    },
+  },
 ];
 
 describe('RTTrP Message Encoding', () => {
