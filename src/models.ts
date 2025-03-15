@@ -115,6 +115,16 @@ export type ZoneObject = {
   name: string;
 };
 
+export type LightingOutput = {
+  type: number;
+  size: number;
+  sequence: number;
+  action: number;
+  holdTime: number;
+  numberOfUniverses: number;
+  universes: Universe[];
+};
+
 export type Universe = {
   type: number;
   size: number;
