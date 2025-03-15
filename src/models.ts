@@ -8,4 +8,14 @@ export type RTTrPHeader = {
   context: number;
   subModuleCount: number;
 };
+
+export type CentroidPosition = {
+  type: number;
+  size: number;
+  latency: number;
+  x: number;
+  y: number;
+  z: number;
+};
+
 };
