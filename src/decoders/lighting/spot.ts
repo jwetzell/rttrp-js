@@ -1,5 +1,5 @@
 import { Decoders } from '..';
-import { ChannelBlock, Spot } from '../../models';
+import type { ChannelBlock, Spot } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): Spot => {
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);

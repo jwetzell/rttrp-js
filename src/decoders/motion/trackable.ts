@@ -1,5 +1,5 @@
 import { Decoders } from '..';
-import { Trackable, TrackableModule } from '../../models';
+import type { Trackable, TrackableModule } from '../../models';
 
 const textDecoder = new TextDecoder('utf-8');
 

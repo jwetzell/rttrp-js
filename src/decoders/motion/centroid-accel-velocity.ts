@@ -1,4 +1,4 @@
-import { CentroidAccelVelocity } from '../../models';
+import type { CentroidAccelVelocity } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): CentroidAccelVelocity => {
   if (bytes.length !== 51) {

@@ -1,5 +1,5 @@
 import { Decoders } from '..';
-import { Spot, Universe } from '../../models';
+import type { Spot, Universe } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): Universe => {
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);

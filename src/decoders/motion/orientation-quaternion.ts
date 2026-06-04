@@ -1,4 +1,4 @@
-import { OrientationQuaternion } from '../../models';
+import type { OrientationQuaternion } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): OrientationQuaternion => {
   if (bytes.length !== 37) {

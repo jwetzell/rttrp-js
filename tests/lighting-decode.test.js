@@ -1,6 +1,6 @@
 const { deepEqual, throws } = require('assert');
 const { describe, it } = require('node:test');
-const { Decoders } = require('../');
+const { Decoders } = require('@jwetzell/rttrp');
 const goodTests = [
   {
     description: 'RTTrPL + Lighting Output + Universe + Spot + Single Channel Block',

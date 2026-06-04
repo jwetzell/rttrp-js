@@ -1,4 +1,4 @@
-import { TrackedPointPosition } from '../../models';
+import type { TrackedPointPosition } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): TrackedPointPosition => {
   if (bytes.length !== 30) {

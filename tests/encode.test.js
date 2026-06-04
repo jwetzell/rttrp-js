@@ -1,6 +1,6 @@
 const { deepEqual, throws } = require('assert');
 const { describe, it } = require('node:test');
-const { Encoders } = require('../');
+const { Encoders } = require('@jwetzell/rttrp');
 
 const goodTests = [
   {

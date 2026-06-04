@@ -1,5 +1,5 @@
 import { Decoders } from '..';
-import { LightingOutput, Universe } from '../../models';
+import type { LightingOutput, Universe } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): LightingOutput => {
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);

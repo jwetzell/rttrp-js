@@ -1,4 +1,4 @@
-import { ZoneObject } from '../../models';
+import type { ZoneObject } from '../../models';
 const textDecoder = new TextDecoder('utf-8');
 export default (bytes: Uint8Array): ZoneObject => {
   const size = bytes[0];

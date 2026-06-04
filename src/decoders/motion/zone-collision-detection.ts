@@ -1,5 +1,5 @@
 import { Decoders } from '..';
-import { ZoneCollisionDetection, ZoneObject } from '../../models';
+import type { ZoneCollisionDetection, ZoneObject } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): ZoneCollisionDetection => {
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);

@@ -1,4 +1,4 @@
-import { ChannelBlock } from '../../models';
+import type { ChannelBlock } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): ChannelBlock => {
   if (bytes.length !== 5) {

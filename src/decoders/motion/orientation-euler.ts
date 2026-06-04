@@ -1,4 +1,4 @@
-import { OrientationEuler } from '../../models';
+import type { OrientationEuler } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): OrientationEuler => {
   if (bytes.length !== 31) {

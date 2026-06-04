@@ -1,5 +1,5 @@
 import { Decoders } from '..';
-import { RTTrPM, Trackable } from '../../models';
+import type { RTTrPM, Trackable } from '../../models';
 
 export default (bytes: Uint8Array): RTTrPM => {
   if (bytes.byteLength < 18) {

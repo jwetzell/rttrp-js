@@ -1,4 +1,4 @@
-import { TrackedPointAccelVelocity } from '../../models';
+import type { TrackedPointAccelVelocity } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): TrackedPointAccelVelocity => {
   if (bytes.length !== 52) {

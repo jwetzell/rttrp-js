@@ -1,4 +1,4 @@
-import { CentroidPosition } from '../../models';
+import type { CentroidPosition } from '../../models';
 
 export default (bytes: Uint8Array, isLittleEndian: boolean = false): CentroidPosition => {
   if (bytes.length !== 29) {

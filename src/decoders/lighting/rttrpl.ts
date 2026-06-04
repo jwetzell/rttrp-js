@@ -1,5 +1,5 @@
 import { Decoders } from '..';
-import { LightingOutput, RTTrPL } from '../../models';
+import type { LightingOutput, RTTrPL } from '../../models';
 
 export default (bytes: Uint8Array): RTTrPL => {
   if (bytes.byteLength < 18) {

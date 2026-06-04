@@ -1,4 +1,4 @@
-import { RTTrPHeader } from '../models';
+import type { RTTrPHeader } from '../models';
 
 export default (bytes: Uint8Array): RTTrPHeader => {
   if (bytes.length < 18) {
